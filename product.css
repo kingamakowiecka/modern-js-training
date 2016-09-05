@@ -1,12 +1,24 @@
+.products {
+    text-align: center;
+}
+
 .product {
     padding: 20px;
     margin: 20px;
     width: 400px;
     background: #e6e6ff;
     box-sizing: border-box;
-    float: left;
+    display: inline-block;
+    text-align: left;
     overflow: auto;
+    transition: box-shadow 0.25s ease-in;
 }
+
+.product:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    color: #990099;
+}
+
 .product__img {
     margin: 1px;
     height: 300px;
