@@ -1,0 +1,40 @@
+.product {
+    padding: 20px;
+    margin: 20px;
+    width: 400px;
+    background: #e6e6ff;
+    box-sizing: border-box;
+    float: left;
+    overflow: auto;
+}
+.product__img {
+    margin: 1px;
+    height: 300px;
+    width: 360px;
+    box-sizing: border-box;
+}
+
+.product__name {
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.product__category {
+    font-size: 12px;
+    margin-top: -15px;
+    box-sizing: border-box;
+}
+
+.product__description {
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.product__price {
+    float: right;
+    box-sizing: border-box;
+}
+
+.clear-fix {
+    clear: both;
+}
