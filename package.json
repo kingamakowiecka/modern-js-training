@@ -1,0 +1,29 @@
+{
+  "name": "modern-js-workshop",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server",
+    "lint": "semistandard",
+    "compile": "babel --presets es2015,stage-0 -d /"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingamakowiecka/modern-js-training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kingamakowiecka/modern-js-training/issues"
+  },
+  "homepage": "https://github.com/kingamakowiecka/modern-js-training#readme",
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "live-server": "^1.1.0",
+    "semistandard": "^9.0.0"
+  }
+}
