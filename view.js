@@ -1,16 +1,19 @@
 'use strict';
 
-const View = {
+class View {
     renderProducts (model, $target) {
         const products = model.getProducts();
+        const productType = model.getProductType();
+
+        $target.appendChild(this._renderProductTitle(model.getProductsTypeTitle()))
 
         for (let idx in products) {
-            const $product = View._renderProduct(products[idx]);
+            const $product = this._renderProduct(products[idx], productType);
             $target.appendChild($product);
         }
-    },
+    };
 
-    _renderProduct (data) {
+    _renderProduct (data, productType) {
         const $product_img = document.createElement('img');
         $product_img.className = 'product__img';
         $product_img.src = data['img'];
@@ -39,7 +42,7 @@ const View = {
         })
 
         const $product_div = document.createElement('div');
-        $product_div.className = 'product';
+        $product_div.className = productType;
         $product_div.appendChild($product_img);
         $product_div.appendChild($product_name);
         $product_div.appendChild($product_category);
@@ -48,5 +51,17 @@ const View = {
         $product_div.appendChild($product_button);
 
         return $product_div;
+    };
+
+    _renderProductTitle(productTypeTitle) {
+        const $title = document.createElement('h1');
+        $title.className = 'product__type__title';
+        $title.textContent = productTypeTitle;
+
+        const $product_title_div = document.createElement('div');
+        $product_title_div.className = 'product__type';
+        $product_title_div.appendChild($title);
+
+        return $product_title_div;
     }
-};
+}
