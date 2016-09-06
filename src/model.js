@@ -1,4 +1,3 @@
-'use strict';
 class Products {
     getProducts() {
         return this.products.slice(0);
@@ -13,7 +12,7 @@ class Products {
     }
 }
 
-class StandardProducts extends Products {
+export class StandardProducts extends Products {
     constructor(productType, productsTypeTitle) {
         super();
         this.productType = productType;
@@ -102,7 +101,7 @@ class StandardProducts extends Products {
 }
 
 
-class SpecialProducts extends Products {
+export class SpecialProducts extends Products {
     constructor(productType, productsTypeTitle) {
         super();
         console.log(this);

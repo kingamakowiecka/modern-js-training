@@ -1,6 +1,6 @@
 'use strict';
 
-class View {
+export class View {
     renderProducts (model, $target) {
         const products = model.getProducts();
         const productType = model.getProductType();
